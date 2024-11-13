@@ -7,26 +7,33 @@ function Navbar() {
         alignItems: "center",
         justifyContent: "flex-end",
         padding: "20px",
+        backgroundColor: "#fff",
       }}
     >
       <ul style={{ listStyle: "none", display: "flex" }}>
         <li style={{ paddingRight: "10px" }}>
-          <Link to="/" style={{ textDecoration: "none" }}>
+          <Link to="/" style={{ textDecoration: "none", color: "black" }}>
             Home
           </Link>
         </li>
         <li style={{ paddingRight: "10px" }}>
-          <Link style={{ textDecoration: "none" }} to="/About">
+          <Link style={{ textDecoration: "none", color: "black" }} to="/About">
             About
           </Link>
         </li>
         <li style={{ paddingRight: "10px" }}>
-          <Link style={{ textDecoration: "none" }} to="/Services">
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/Services"
+          >
             Services
           </Link>
         </li>
         <li style={{ paddingRight: "10px" }}>
-          <Link style={{ textDecoration: "none" }} to="/Contact ">
+          <Link
+            style={{ textDecoration: "none", color: "black" }}
+            to="/Contact "
+          >
             Contact
           </Link>
         </li>
