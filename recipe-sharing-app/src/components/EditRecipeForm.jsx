@@ -7,8 +7,8 @@ function EditRecipeForm (recipe){
     const handleChange = (e) => {
         setEditRecipe({ ...editRecipe, [e.target.name]: e.target.value })
     };
-    const handleSubmit = (e) => {
-        e.preventDefault(),
+    const handleSubmit = (event) => {
+        event.preventDefault(),
         updateRecipe(editRecipe);
     }
     return (
