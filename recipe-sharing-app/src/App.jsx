@@ -1,9 +1,12 @@
 import { useState } from 'react'
+import { BrowserRouter, Routes, Route,} from "react-router-dom";
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
+
 import './App.css'
 import RecipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
+import RecipeDetails from './components/RecipeDetails';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -30,8 +33,14 @@ function App() {
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
       </p>
-        <RecipeList /> 
+      <BrowserRouter>
         <AddRecipeForm />
+        <RecipeList />
+        <Routes>
+          <Route path=''  element={<RecipeDetails />}/>
+        </Routes>
+      </BrowserRouter>
+
     </>
   )
 }
