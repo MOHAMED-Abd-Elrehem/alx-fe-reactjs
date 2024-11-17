@@ -3,20 +3,20 @@ import useRecipeStore from "./recipeStore";
 
 const AddRecipeForm = () => {
   const addRecipe = useRecipeStore((state) => state.addRecipe);
-  const [title, setTitel] = useState("");
+  const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const handleSubmit = (event) => {
     event.preventDefaule();
     addRecipe({ id: Date.now(), title, description });
-    setTitel("");
-    setDescription("");
+    setTitle('');
+    setDescription('');
   };
   return (
     <form onSubmit={handleSubmit}>
       <input
         type="text"
         value={title}
-        onChange={(e) => setTitel(e.target.value)}
+        onChange={(e) => setTitle(e.target.value)}
         placeholder="Title"
       />
       <textarea
