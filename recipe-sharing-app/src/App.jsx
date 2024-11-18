@@ -7,6 +7,7 @@ import './App.css'
 import RecipeList from './components/RecipeList'
 import AddRecipeForm from './components/AddRecipeForm'
 import RecipeDetails from './components/RecipeDetails';
+import SearchBar from './components/SearchBar';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -35,7 +36,11 @@ function App() {
       </p>
       <BrowserRouter>
         <AddRecipeForm />
-        <RecipeList />
+        <div style={{padding: 20}}>
+          <SearchBar />
+          <RecipeList />
+        </div>
+        
         <Routes>
           <Route path=''  element={<RecipeDetails />}/>
         </Routes>
