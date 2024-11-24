@@ -11,13 +11,13 @@ const RegistrationForm = () => {
         console.log(formData);
     };
     const newErrors = {};
-    if (!FormData.username) {
+    if (!username) {
         errors.name= 'name is requierd'
     } 
-    if (!FormData.password) {
+    if (!password) {
         errors.password= 'password is requierd'
     } 
-    if (!FormData.email) {
+    if (!email) {
         errors.email= 'email is requierd'
     } 
     seErrors(newErrors);
