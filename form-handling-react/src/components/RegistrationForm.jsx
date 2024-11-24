@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 const RegistrationForm = () => {
-    const [formData, setFormData] = useState({ name: '', email: '', password: '' });
+    const [formData, setFormData] = useState({ username: '', email: '', password: '' });
     const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData(prevstate => ({ ...prevstate, [name]: value }));
+        const { username, value } = e.target;
+        setFormData(prevstate => ({ ...prevstate, [username]: value }));
     };
     const [errors , seErrors] = useState()
     const handleSubmit = (e) => {
@@ -12,7 +12,7 @@ const RegistrationForm = () => {
         console.log(formData);
     };
     const newErrors = {};
-    if (!setFormData.name) {
+    if (!setFormData.username) {
         errors.name= 'name is requierd'
     } 
     if (!setFormData.password) {
@@ -30,7 +30,7 @@ const RegistrationForm = () => {
         <input
             type="text"
             name="name"
-            value={formData.name}
+            value={formData.username}
             onChange={handleChange}
         />
         {errors.name && <p>{errors.name} </p>}
