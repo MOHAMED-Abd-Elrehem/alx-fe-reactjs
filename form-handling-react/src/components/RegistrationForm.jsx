@@ -5,7 +5,7 @@ const RegistrationForm = () => {
     const handleChange = (event) => {
         setFormData(({ ...formData, [event.target.namr]: event.target.value }));
     };
-    const [errors , seErrors] = useState()
+    const [errors , setErrors] = useState()
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log(formData);
@@ -20,7 +20,7 @@ const RegistrationForm = () => {
     if (!email) {
         errors.email= 'email is requierd'
     } 
-    seErrors(newErrors);
+    setErrors(newErrors);
     if (Object.keys(errors).length === 0) {
         console.log(formData)
     }
