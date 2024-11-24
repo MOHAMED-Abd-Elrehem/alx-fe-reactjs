@@ -2,9 +2,8 @@ import { useState } from "react";
 
 const RegistrationForm = () => {
     const [formData, setFormData] = useState({ username: '', email: '', password: '' });
-    const handleChange = (e) => {
-        const { username, value } = e.target;
-        setFormData(prevstate => ({ ...prevstate, [username]: value }));
+    const handleChange = (event) => {
+        setFormData(({ ...formData, [event.target.namr]: event.target.value }));
     };
     const [errors , seErrors] = useState()
     const handleSubmit = (e) => {
@@ -12,13 +11,13 @@ const RegistrationForm = () => {
         console.log(formData);
     };
     const newErrors = {};
-    if (!setFormData.username) {
+    if (!FormData.username) {
         errors.name= 'name is requierd'
     } 
-    if (!setFormData.password) {
+    if (!FormData.password) {
         errors.password= 'password is requierd'
     } 
-    if (!setFormData.email) {
+    if (!FormData.email) {
         errors.email= 'email is requierd'
     } 
     seErrors(newErrors);
