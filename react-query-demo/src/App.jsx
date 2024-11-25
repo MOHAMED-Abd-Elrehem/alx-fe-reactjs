@@ -1,6 +1,6 @@
 import './App.css';
 import { QueryClient, QueryClientProvider } from 'react-query';
-import PostsComponent from './component/PostsComponent.jsx';
+import PostsComponent from './components/PostsComponent.jsx';
 const queryClient = new QueryClient();
 function App() {
   return (
