@@ -1,4 +1,4 @@
-import { BrowserRouter, Router, Route } from "react-router-dom"
+import { BrowserRouter, Routes, Route } from "react-router-dom"
 import ProfileDetails from "./components/ProfileDetails";
 import ProfileSettings from "./components/ProfileSettings";
 import Profile from "./components/Profile";
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <BrowserRouter>
-        <Router>
+        <Routes>
           <Route
             path="/profile"
             element={
@@ -26,7 +26,7 @@ function App() {
           </Route>
           <Route path=":userId" element={<UserProfiles />} />
           <Route path="/login" element={<Login />} />
-        </Router>
+        </Routes>
       </BrowserRouter>
     </>
   );
