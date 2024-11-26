@@ -3,7 +3,7 @@ import ProfileDetails from "./components/ProfileDetails";
 import ProfileSettings from "./components/ProfileSettings";
 import Profile from "./components/Profile";
 import './App.css'
-import UserProfiles from "./components/UserProfiles";
+import BlogPost from "./components/BlogPost";
 import ProtectRoute from "./components/ProtectedRoute";
 import Login from "./components/login";
 
@@ -24,7 +24,7 @@ function App() {
             <Route path="details" element={<ProfileDetails />} />
             <Route path="settings" element={<ProfileSettings />} />
           </Route>
-          <Route path=":userId" element={<UserProfiles />} />
+          <Route path="/blog/:id" element={<BlogPost />} />
           <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>

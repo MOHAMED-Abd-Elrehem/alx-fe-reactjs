@@ -3,7 +3,7 @@ const UsersId = () => {
     const { userId } = useParams();
     return <h2> User ID: {userId}</h2>
 };
-const UserProfiles = () => (
+const BlogPost = () => (
   <Router>
     <div>
       <nav>
@@ -19,4 +19,4 @@ const UserProfiles = () => (
     </div>
   </Router>
 );
-export default UserProfiles;
+export default BlogPost;
