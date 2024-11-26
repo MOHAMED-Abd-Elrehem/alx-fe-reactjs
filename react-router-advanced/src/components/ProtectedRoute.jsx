@@ -1,22 +1,14 @@
-import { Route, Redirect } from "react-router-dom";
-import Profile from "./Profile";
+import { Navigate, Outlet } from "react-router-dom";
+import useAuth from "../hooks/useAuth"; 
 
-const isAuthenticated = () => {
-    return localStorage.getItem('authToken') !== null;
-};
+function ProtectedRoute() {
+  const { isAuthenticated } = useAuth();
 
-const ProtectRoute = () => {
-  <Route
-        
-        render={props =>
-            isAuthenticated() ? (
-                <Profile {...props} />
-            ) : (
+  if (!isAuthenticated) {
+    return <Navigate to="/login" replace />;
+  }
 
-                <Redirect to="/login" />
-            )
-        }
-    />
-    
-};
-export default ProtectRoute;
+  return <Outlet />;
+}
+
+export default ProtectedRoute;
