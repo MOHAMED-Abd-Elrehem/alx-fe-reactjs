@@ -1,10 +1,11 @@
-import { Route, Link, useRouteMatch } from 'react-router-dom'
+import {Routes , Route, Link, useRouteMatch } from 'react-router-dom'
 import ProfileDetails from './ProfileDetails';
 import ProfileSettings from './ProfileSettings';
 
 const Profile = () => {
     let { path, url } = useRouteMatch();
     return (
+        <Routes>
         <div>
             <h2>Profile</h2>
             <ul>
@@ -19,7 +20,8 @@ const Profile = () => {
                     <ProfileSettings />
                 </Route>
             
-        </div>
+            </div>
+            </Routes>
     );
 };
 export default Profile;
