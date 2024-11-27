@@ -1,6 +1,6 @@
 import { useState } from "react";
 import AddTodoForm from "./AddTodoForm";
-const Todo = () => {
+const TodoList = () => {
     const [todos, setTodos] = useState([{ id: 1, text: 'Learn Nod.js', completed: true }, { id: 2, text: 'Learn React Css FrameWorks', completed: false }],);
     const handleAddTodo = (text) => {
         const newTodos = { id: Date.now(), text, completed: false };
@@ -28,4 +28,4 @@ const Todo = () => {
     );
 };
 
-export default Todo;
+export default TodoList;

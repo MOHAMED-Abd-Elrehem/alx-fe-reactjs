@@ -1,7 +1,8 @@
 // TodoList.test.js
 import { render, screen, fireEvent } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import TodoList from "./TodoList";
+import TodoList from "../assets/components/TodoList";
+
 
 describe("TodoList component", () => {
     test("renders initial todos", () => {
