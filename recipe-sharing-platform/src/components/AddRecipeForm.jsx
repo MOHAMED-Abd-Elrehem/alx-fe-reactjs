@@ -7,7 +7,7 @@ const AddRecipeForm = () => {
         summary: '',
         image: '',
         ingredients: [],
-        instructions: [],
+        preparationSteps: [],
         cooking: ''
     });
     const [errors, setErrors] = useState({})
@@ -26,8 +26,8 @@ const AddRecipeForm = () => {
         if (!formData.ingredients) {
             newErrors.ingredients = 'Ingredients is required'
         }
-        if (!formData.instructions) {
-            newErrors.instructions = 'Instructions is required'
+        if (!formData.preparationSteps) {
+            newErrors.preparationSteps = "preparationSteps is required";
         }
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
@@ -40,7 +40,7 @@ const AddRecipeForm = () => {
             summary: "",
             image: "",
             ingredients: [],
-            instructions: [],
+            preparationSteps: [],
             cooking: "",
         });
         setErrors({});
@@ -98,14 +98,14 @@ const AddRecipeForm = () => {
                     </label>
                     <input
                         type="text"
-                        id="instructions"
-                        name="instructions"
-                        value={formData.instructions}
+                        id="preparationSteps"
+                        name="preparationSteps"
+                        value={formData.preparationSteps}
                         onChange={handleChange}
                         className={`mt-1 block w-full rounded-md  
             border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm
-            ${errors.instructions ? 'border-red-500' : ''}`} />
-                    {errors.instructions && <p className="text-red-500 text-sm">{errors.instructions}</p>}
+            ${errors.preparationSteps? 'border-red-500' : ''}`} />
+                    {errors.preparationSteps && <p className="text-red-500 text-sm">{errors.preparationSteps}</p>}
                 </div>
                 <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Submit
