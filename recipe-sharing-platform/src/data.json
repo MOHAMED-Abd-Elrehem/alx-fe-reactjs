@@ -4,12 +4,24 @@
     "id": 1,
     "title": "Spaghetti Carbonara",
     "summary": "A classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
-    "image": "https://via.placeholder.com/150"
+    "image": "https://via.placeholder.com/150",
+    "ingredients": ["Pasta", "Eggs", "Cheese", "Bacon", "Black Pepper"],
+    "instructions": [
+      "Cook pasta al dente.",
+      "Whisk eggs, cheese, and black pepper.",
+      "Combine pasta and egg mixture.",
+      "Add bacon and serve immediately."
+    ],
+    "cooking":"30m"
+  
   },
   {
     "id": 2,
-    "title": "Chicken Tikka Masala",
-    "summary": "Chunks of grilled chicken (tikka) cooked in a smooth buttery & creamy tomato based gravy.",
-    "image": "https://via.placeholder.com/150"
+    "title": "Garden Salad",
+    "summary": "Dive into the essence of summer with a Garden Salad, the epitome of freshness in every bite.",
+    "image": "https://becentsational.com/garden-salad/",
+    "ingredients":["1 bag of leafy greens","1 cup cherry tomatoes, halved","1 cucumber, sliced","1 small red onion, thinly sliced"],
+    "instructions":["In a large bowl, combine the leafy greens, cherry tomatoes, cucumber, and red onion"],
+    "cooking":"10m"
   }
 ]
