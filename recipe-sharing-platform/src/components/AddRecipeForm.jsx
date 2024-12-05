@@ -16,21 +16,21 @@ const AddRecipeForm = () => {
     };
     const handleSubmit = (e) => {
         e.preventDefault();
-        const newErrors = {};
+        const validate = {};
         if (!formData.title) {
-            newErrors.title = 'Title is required'
+            validate.title = 'Title is required'
         }
         if (!formData.summary) {
-            newErrors.summary = 'Summary is required'
+            validate.summary = 'Summary is required'
         }
         if (!formData.ingredients) {
-            newErrors.ingredients = 'Ingredients is required'
+            validate.ingredients = 'Ingredients is required'
         }
         if (!formData.steps) {
-            newErrors.steps = "steps is required";
+            validate.steps = "steps is required";
         }
-        if (Object.keys(newErrors).length > 0) {
-            setErrors(newErrors);
+        if (Object.keys(validate).length > 0) {
+            setErrors(validate);
             return;
         }
         console.log(formData)
