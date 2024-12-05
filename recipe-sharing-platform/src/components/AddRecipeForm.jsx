@@ -7,7 +7,7 @@ const AddRecipeForm = () => {
         summary: '',
         image: '',
         ingredients: [],
-        preparationSteps: [],
+        steps: [],
         cooking: ''
     });
     const [errors, setErrors] = useState({})
@@ -26,8 +26,8 @@ const AddRecipeForm = () => {
         if (!formData.ingredients) {
             newErrors.ingredients = 'Ingredients is required'
         }
-        if (!formData.preparationSteps) {
-            newErrors.preparationSteps = "preparationSteps is required";
+        if (!formData.steps) {
+            newErrors.steps = "steps is required";
         }
         if (Object.keys(newErrors).length > 0) {
             setErrors(newErrors);
@@ -40,7 +40,7 @@ const AddRecipeForm = () => {
             summary: "",
             image: "",
             ingredients: [],
-            preparationSteps: [],
+            steps: [],
             cooking: "",
         });
         setErrors({});
@@ -54,7 +54,7 @@ const AddRecipeForm = () => {
                     <label htmlFor="title" className="block text-sm font-medium text-gray-700">
                         Title
                     </label>
-                    <input
+                    <textarea
                         type="text"
                         id="title"
                         name="title"
@@ -65,24 +65,11 @@ const AddRecipeForm = () => {
             ${errors.title ? 'border-red-500' : ''}`} />
                     {errors.title && <p className="text-red-500 text-sm">{errors.title}</p>}
 
-                    <label htmlFor="summary" className="block text-sm font-medium text-gray-700">
-                        Summary
-                    </label>
-                    <input
-                        type="text"
-                        id="summary"
-                        name="summary"
-                        value={formData.summary}
-                        onChange={handleChange}
-                        className={`mt-1 block w-full rounded-md  
-            border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm
-            ${errors.summary ? 'border-red-500' : ''}`} />
-                    {errors.summary && <p className="text-red-500 text-sm">{errors.summary}</p>}
 
                     <label htmlFor="ingredients" className="block text-sm font-medium text-gray-700">
                         Ingredients
                     </label>
-                    <input
+                    <textarea
                         type="text"
                         id="ingredients"
                         name="ingredients"
@@ -96,23 +83,23 @@ const AddRecipeForm = () => {
                     <label htmlFor="instructions" className="block text-sm font-medium text-gray-700">
                         Instructions
                     </label>
-                    <input
+                    <textarea
                         type="text"
-                        id="preparationSteps"
-                        name="preparationSteps"
-                        value={formData.preparationSteps}
+                        id="steps"
+                        name="steps"
+                        value={formData.steps}
                         onChange={handleChange}
                         className={`mt-1 block w-full rounded-md  
             border border-gray-300 bg-white py-2 px-3 shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm
-            ${errors.preparationSteps? 'border-red-500' : ''}`} />
-                    {errors.preparationSteps && <p className="text-red-500 text-sm">{errors.preparationSteps}</p>}
+            ${errors.steps? 'border-red-500' : ''}`} />
+                    {errors.steps && <p className="text-red-500 text-sm">{errors.steps}</p>}
                 </div>
                 <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
                     Submit
                 </button>
             </form>
         </div>
-    );
+    ); 
     
 };
 
